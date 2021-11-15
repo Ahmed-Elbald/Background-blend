@@ -1,0 +1,65 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+i {
+    cursor: pointer;
+}
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent {
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    border: 1px dotted black;
+    margin: 20px auto;
+}
+.parent > .img {
+    height: 80%;
+    width: 100%;
+    background-image: url(../images/Ahmed.png);
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    transition-duration: .5s;
+}
+.parent:hover > .img {
+    background-image: url(../images/Ahmed.png) , linear-gradient(to right , #6ec2bccf , #6ec2bccf);
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+.parent:hover > div {
+    width: 100%;
+}
+.parent > div {
+    position: absolute;
+    height: 30%;
+    width: 70%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    padding: 15px;
+    flex-direction: column;
+    background-color: white;
+    font-weight: bold;
+    transition-duration: .5s;
+}
+.parent > div > .red {
+    color: red;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
